@@ -1,0 +1,192 @@
+/* font-family: 'Ms Madi', cursive; */
+/* font-family: 'Open Sans', sans-serif; */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header {
+    background-color: #3162a2;
+    padding: 16px 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #6fa9ef;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+}
+
+nav ul li {
+    display: block;
+    flex-grow: 1;
+    /*La propiedad flex-grow de CSS especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex),
+    en su direccion principal.*/
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.activo {
+    background-color: #4e74a6;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #2E64A1;
+    font-weight: 400;
+}
+
+.bienvenidos {
+    width: 75%;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+.testimonios {
+    width: 25%;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos p {
+    font-size: 20px;
+}
+
+.testimonio {
+    background-color: #ccc;
+    padding: 16px;
+}
+
+.cita {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+}
+
+.autor {
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    margin: 12px;
+}
+
+.historia p {
+    font-size: 12px;
+}
+
+/*personitas*/
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.persona {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.persona h5 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.persona h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #2E64A1;
+}
+
+.persona p {
+    color: #666;
+    font-size: 10px;
+}
+
+.persona img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 5px 0 5px black;
+}
+
+/*GALERIA*/
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.galeria img{
+    border: 1px solid #999;
+    padding: 5px;
+    width: 18%;
+    margin-bottom: 20px ;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+/*Contacto*/
+
+.contacto {
+    display: flex;
+    gap: 24px;
+}
+
+.contacto div {
+    width: 100%;
+}
+.datos {
+    /* background-color: yellow; */
+    padding: 20px;
+    border-left: 2px solid #2E64A1;
+    margin-bottom: 100px;
+}
