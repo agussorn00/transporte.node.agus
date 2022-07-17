@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config()
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var nosotrosRouter = require('./routes/nosotros');
@@ -13,6 +14,8 @@ var galeriaRouter = require('./routes/galeria');
 var novedadesRouter = require('./routes/novedades');
 var contactoRouter = require('./routes/contacto');
 var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
+const { Cookie } = require('express-session');
 
 var app = express();
 
@@ -26,13 +29,38 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret:'lalolanda',
+  cookie:{MaxAge:null},
+  resave:false,
+  saveUninitialized:true,
+}))
+
+
+//secured = async(req,res,next) =>{
+//  try{
+//    console.log(req.session.id_usuario);
+//    if(req.session.id_usuario) {
+//      next()
+//    } else {
+//      res.redirect('/admin/login')
+//    }
+//  }catch (error) {
+//    console.log(error)
+//  }
+//}
+
 app.use('/', indexRouter);
 app.use('/nosotros', nosotrosRouter );
 app.use('/servicios', serviciosRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/novedades', novedadesRouter);
 app.use('/contacto', contactoRouter);
-app.use('/admin/login', loginRouter)
+app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', adminRouter); //falta secured
+
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
