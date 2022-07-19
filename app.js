@@ -15,7 +15,7 @@ var novedadesRouter = require('./routes/novedades');
 var contactoRouter = require('./routes/contacto');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
-const { Cookie } = require('express-session');
+//const { Cookie } = require('express-session');
 
 var app = express();
 
